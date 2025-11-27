@@ -1,0 +1,266 @@
+* {
+    font-family:  'Segoe UI', 'Roboto', 'Oxygen';
+    margin: 0;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+    padding: 30px;
+}
+.container-card {
+    max-width: 400px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 17px 0px #223c5033;
+    transition: all 0.2s ease;
+}
+
+.container-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 6px 20px 0px #223c5033
+}
+
+.image-card {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+
+button {
+    cursor: pointer;
+}
+.btn-card {
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    color: #ffffff;
+    background-color: #6487df;
+    transition: all 0.2s ease;
+}
+
+.btn-card:hover {
+    background-color: #5a79c8;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.info-product {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-product {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    color: #656565;
+}
+.price-product::after {
+    content: ' $';
+}
+
+.price-card.old {
+    text-decoration: line-through;
+    color: #a7a7a7;
+}
+
+.counter-product {
+    display: flex;
+    gap: 5px;
+    
+}
+
+.count-product {
+    color: #656565;
+}
+.count-product::after {
+    content: ' шт.';
+}
+
+.btn-counter {
+    border: none;
+    border-radius: 5px;
+    width: 50px;
+    background-color: #f3f3f3;
+    color: #515151;
+    transition: all 0.2s ease;
+}
+
+.btn-counter:disabled {
+    background-color: transparent;
+    cursor: not-allowed;
+    color: transparent;
+}
+.btn-counter:hover:disabled {
+    background-color: transparent;
+    color: transparent;
+}
+
+.btn-counter:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-disabled {
+    background-color: #b5b5b5 !important;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.btn-size {
+    padding: 5px 10px;
+    background-color: #f3f3f3;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+}
+
+.btn-size:hover {
+    background-color: #e0e0e0;
+    border: 1px solid #c9c9c9;
+    transition: all 0.2s ease;
+}
+
+
+.btnSize {
+    background-color: #a5cdff;
+    border: none;
+    color: #ffffff;
+}
+
+.btnSize:hover {
+    background-color: #a5cdff;
+    border: none;
+    color: #ffffff;
+}
+
+input[type="radio" i]{
+    display: none;
+}
+
+label {
+    cursor: pointer;
+}
+
+.real-radio {
+    display: none;
+}
+
+/* сам кружок */
+.custom-radio {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    transition: 0.2s;
+    border: 2px solid transparent; /* ключевой момент! */
+}
+
+/* hover */
+.custom-radio:hover {
+    border-color: #7da4ff; /* мягкое синее свечение */
+}
+
+/* цвета */
+.custom-radio.red   { background: red; }
+.custom-radio.blue  { background: blue; }
+.custom-radio.green { background: green; }
+
+/* активный цвет */
+.real-radio:checked + .custom-radio {
+    border-color: #6487df;
+    box-shadow: 0 0 4px rgba(0,0,0,0.4); /* деликатное свечение */
+}
+
+
+/* картинки */
+.preview-container {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.preview-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.preview-image:hover {
+    box-shadow: 0 0 6px rgba(0,0,0,0.4);
+}
+
+.preview-selected {
+    border: 2px solid #6487df;
+    box-shadow: 0 0 6px rgba(0,0,0,0.4);
+}
+
+/* картинки */
+
+.preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.carousel-window {
+    width: 200px;
+    overflow: hidden;
+}
+.preview-container {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-switch {
+    font-family: monospace;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn-switch:disabled {
+   color: transparent;
+}
+
+/* viewer */
+
+.viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+.viewer.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}

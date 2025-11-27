@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Карточка товара</title>
+    <link rel="stylesheet" href="./card.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="container-card">
+            <img src="./patrick.jpg" alt="soda" class="image-card">
+            <div class="card-info">
+                <div class="info-product">
+                    <h3 class="title-card" id="name"></h3>
+                    <div class="counter-product">
+                        <button id="btnMinus" class="btn-counter">-</button>
+                        <p class="count-product" id="count"></p>
+                        <button id="btnPlus" class="btn-counter">+</button>
+                    </div>
+                </div>
+                <div class="price-product">
+                    <p class="price-card old" id="price"></p>
+                    <p class="price-card" id="discountPrice"></p>
+                </div>
+            </div>
+            <button id="btnBuy" class="btn-card">Купить</button>
+        </div>
+    </main>
+    <footer></footer>
+    <script type="text/javascript" src="./card.js"></script>
+</body>
+</html>
